@@ -1,0 +1,109 @@
+{
+"type": "frame",
+"name": "Space Tour Page - Desktop",
+"width": 1440,
+"height": 3000,
+"children": \[
+{
+"type": "frame",
+"name": "Header",
+"backgroundColor": "#0a0f1a",
+"children": \[
+{
+"type": "image",
+"name": "Poster",
+"src": "/img/space.jpeg",
+"width": 600,
+"height": 400,
+"cornerRadius": 8
+},
+{
+"type": "text",
+"name": "Title",
+"content": "Space Tour",
+"fontSize": 48,
+"color": "#ffffff",
+"fontWeight": "bold",
+"textAlign": "center"
+},
+{
+"type": "text",
+"name": "SubTitle",
+"content": "Viernes 24 Octubre | 8:00 PM | Auditorio ESEN",
+"fontSize": 20,
+"color": "#7a7f89",
+"textAlign": "center"
+}
+]
+},
+{
+"type": "frame",
+"name": "Main",
+"backgroundColor": "#0a0f1a",
+"children": \[
+{
+"type": "frame",
+"name": "Search Form",
+"backgroundColor": "#0a0f1a",
+"width": 400,
+"children": \[
+{
+"type": "text",
+"name": "Search Title",
+"content": "🎟️ Buscar Boleto por Correlativo",
+"fontSize": 24,
+"color": "#ffffff",
+"textAlign": "center"
+},
+{
+"type": "input",
+"name": "Correlativo Input",
+"placeholder": "Ingresa el número...",
+"width": 100,
+"backgroundColor": "#222222",
+"color": "#ffffff"
+},
+{
+"type": "button",
+"name": "Search Button",
+"content": "Buscar",
+"backgroundColor": "#7a7f89",
+"color": "#ffffff"
+}
+]
+},
+{
+"type": "frame",
+"name": "Ticket Info",
+"backgroundColor": "#1c273d",
+"cornerRadius": 8,
+"children": \[
+{
+"type": "text",
+"name": "Ticket Title",
+"content": "Información del boleto",
+"fontSize": 24,
+"color": "#ffffff",
+"textAlign": "center"
+}
+]
+}
+]
+},
+{
+"type": "frame",
+"name": "Footer",
+"backgroundColor": "#0a0f1a",
+"children": \[
+{
+"type": "text",
+"name": "Footer Text",
+"content": "© 2025 ESEN Music & Hope - Todos los derechos reservados",
+"fontSize": 16,
+"color": "#7a7f89",
+"textAlign": "center"
+}
+]
+}
+]
+}

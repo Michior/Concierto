@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Tour - ESEN Music & Hope</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <header class="header">
+                <div class="poster">
+                    <img src="/img/space.jpeg" alt="Space Tour Poster">
+                </div>
+                <h1>Space Tour</h1>
+                <p>Viernes 24 Octubre | 8:00 PM | Auditorio ESEN</p>
+            </header>
+            <main>
+                <form method="post" class="search-form">
+                    <h2>🎟️ Buscar Boleto por Correlativo</h2>
+                    <label for="correlativo">Número de correlativo:</label>
+                    <input type="number" id="correlativo" name="correlativo" placeholder="Ingresa el número..." required>
+                    <button type="submit" class="search-button">Buscar</button>
+                    {% if mensaje %}
+                        <div class="info">{{ mensaje }}</div>
+                    {% endif %}
+                </form>
+                {% if info %}
+                    <div class="ticket-info">
+                        <h2>Información del boleto</h2>
+                        <table class="ticket-table">
+                            <tbody>
+                                {% for key, value in info.items() %}
+                                    {% if value is not none and value|string != 'nan' and value|string != '' %}
+                                        <tr>
+                                            <td><strong>{{ key }}:</strong></td>
+                                            <td>{{ value }}</td>
+                                        </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% if info['Estado'] == 'Validado' %}
+                            <div class="validated">
+                                <span class="icon">✔</span> Este boleto ya fue validado.
+                            </div>
+                        {% else %}
+                            <div class="not-validated">
+                                <span class="icon">✖</span> El boleto no ha sido validado.
+                            </div>
+                        {% endif %}
+                        <br>
+                        <div class="actions">
+                            {% if info['Estado'] != 'Validado' %}
+                                <form method="post" action="/validar">
+                                    <input type="hidden" name="numero_entrada" value="{{ info['Número de entrada vendida'] }}">
+                                    <button type="submit" class="validate-button">✔ Validar boleto</button>
+                                </form>
+                            {% endif %}
+                            <form method="get" action="/">
+                                <button type="submit" class="search-button">🔍 Buscar otro</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if no_encontrado %}
+                    <div class="error-container">
+                        <div class="error">
+                            <span class="icon">✖</span> El número de boleto no existe o no fue vendido.
+                        </div>
+                        <form method="get" action="/">
+                            <button type="submit" class="search-button">
+                                <span class="icon">🔍</span> Buscar otro boleto
+                            </button>
+                        </form>
+                    </div>
+                {% endif %}
+            </main>
+            <footer class="footer">
+                <p>© 2025 ESEN Music & Hope - Todos los derechos reservados</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

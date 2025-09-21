@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #0a0f1a; /* Negro espacial */
+    color: #ffffff;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 25px 0;
+    background: linear-gradient(135deg, #0a0f1a, #1c273d);
+    color: #ffffff;
+}
+.header .poster {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.header h1 {
+    font-size: 3rem;
+    margin: 20px 0 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.header p {
+    font-size: 1.2rem;
+    color: #7a7f89;
+}
+
+/* Search Form */
+.search-form {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+.search-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.search-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.search-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+}
+.search-form input::placeholder {
+    color: #aaa;
+}
+.search-form button {
+    width: 100%;
+    padding: 10px;
+    background: #7a7f89;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.search-form button:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Search Button for "Buscar otro boleto" */
+.search-button {
+    background: #7a7f89; /* Gris espacial */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.search-button:hover {
+    background: #ffffff; /* Fondo blanco al pasar el cursor */
+    color: #0a0f1a; /* Texto negro espacial */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Icon inside alerts and buttons */
+.validated .icon, .not-validated .icon, .search-button .icon {
+    font-size: 1.2rem;
+}
+
+/* Ticket Info */
+.ticket-info {
+    background: #1c273d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ticket-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.ticket-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: auto;
+}
+.ticket-table td {
+    padding: 10px;
+    border-bottom: 1px solid #7a7f89;
+    color: #ffffff;
+}
+.ticket-table td:first-child {
+    font-weight: bold;
+    color: #7a7f89;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a0f1a;
+    color: #7a7f89;
+    border-top: 2px solid #1c273d;
+}
+
+/* Alert Styles */
+/* Validated Alert */
+.validated {
+    background: #d4edda; /* Verde claro */
+    color: #155724; /* Verde oscuro */
+    border: 1px solid #c3e6cb;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Not Validated Alert */
+.not-validated {
+    background: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    border: 1px solid #f5c6cb;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Container */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Error Alert */
+.error {
+    background: #f8d7da; /* Rojo claro */
+    color: #721c24; /* Rojo oscuro */
+    border: 1px solid #f5c6cb;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
