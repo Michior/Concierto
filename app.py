@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import pandas as pd
 import json
 
@@ -123,6 +123,11 @@ def validar():
 
     # Redirigir a la página principal con un mensaje
     return redirect(url_for('index', mensaje=mensaje))
+
+# Configuración para servir archivos estáticos
+@app.route('/assets/<path:filename>')
+def static_files(filename):
+    return send_from_directory('assets', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
